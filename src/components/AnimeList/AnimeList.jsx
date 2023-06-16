@@ -25,8 +25,8 @@ function AnimeList() {
     setSearch(searcher);
   };
 
-  const handleAnimeClick = (anime) => {
-    navigate(`/data-anime`, { state: { anime } });
+  const handleAnimeClick = (item) => {
+    navigate(`/data-anime`, { state: { item } });
   };
 
   console.log(animeList);
