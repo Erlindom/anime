@@ -3,17 +3,19 @@ import { useEffect, useState } from 'react';
 import '../AnimeList/animeList.css'
 import axios from 'axios';
 import TopAnime from '../TopAnime/TopAnime';
+import { useDebounce } from "use-debounce";
 
 function AnimeList() {
   const [animeList, setAnimeList] = useState([]);
   const [search, setSearch] = useState("");
+  const [debounceSearch] = useDebounce(search, 500)
 
   useEffect(() => {
     fetchAnime()
-  }, [search])
+  }, [debounceSearch])
 
   async function fetchAnime() {
-    const response = await axios.get(`https://api.jikan.moe/v4/anime?q=${search}`)
+    const response = await axios.get(`https://api.jikan.moe/v4/anime?q=${debounceSearch}`)
     setAnimeList(response.data.data);
   }
 
