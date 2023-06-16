@@ -1,5 +1,6 @@
 import { useLocation, Link } from 'react-router-dom';
 import "../DataAnime/dataAnime.css"
+import Comments from "../DataAnime/Comments"
 
 function DataAnime() {
   const location = useLocation();
@@ -38,6 +39,7 @@ console.log(item);
           </div>
         )}
       </div>
+      <Comments />
     </>
   );
 }

@@ -32,3 +32,23 @@
     gap: 10px;
     align-items: center;
 }
+
+.container_comment {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-comment {
+    margin-bottom: 30px;
+}
+
+.content_comments {
+    display: flex;
+    gap: 10px;
+}
+
+.comment_img {
+    width: 50px;
+    border-radius: 50px;
+}
