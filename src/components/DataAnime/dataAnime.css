@@ -17,8 +17,9 @@
 
 .noticies {
     width: 250px;
-    background-color: gray;
+    background-color: var(--colorGray);
     padding: 20px;
+    border-radius: 20px;
 }
 
 .image_notice {
@@ -57,5 +58,5 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: gray;
+    background-color: var(--colorBlackLight);
 }

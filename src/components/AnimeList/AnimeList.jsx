@@ -4,6 +4,7 @@ import '../AnimeList/animeList.css';
 import axios from 'axios';
 import TopAnime from '../TopAnime/TopAnime';
 import { useDebounce } from 'use-debounce';
+import Logo from "../img/logo.png"
 
 function AnimeList() {
   const [animeList, setAnimeList] = useState([]);
@@ -34,11 +35,12 @@ function AnimeList() {
   return (
     <>
       <nav className="nav">
-        <h1>Anime</h1>
+        <img src={Logo} alt="" className='logo'/>
         <input
           type="search"
           placeholder="Buscar..."
           onChange={animeSearch}
+          className='search'
         />
       </nav>
       <div className="contentpro">

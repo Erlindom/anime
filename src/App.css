@@ -1,5 +1,12 @@
 html,
 body {
+    --colorWhite: #fff;
+    --colorBlack: #111;
+    --colorBlackLight: #161616;
+    --colorGray: rgb(58, 57, 57);
     margin: 0;
     padding: 0;
+    background-color: var(--colorBlack);
+    color: var(--colorWhite);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
