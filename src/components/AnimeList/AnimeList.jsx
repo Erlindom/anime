@@ -33,22 +33,26 @@ function AnimeList() {
 
   return (
     <>
-      <div className="search-box">
+      <nav className="nav">
+        <h1>Anime</h1>
         <input
           type="search"
-          placeholder="Search your anime"
+          placeholder="Buscar..."
           onChange={animeSearch}
         />
-      </div>
+      </nav>
       <div className="contentpro">
         <TopAnime />
-        <div className="anime_container">
-          {animeList.map((item) => (
-            <div key={item.mal_id} className="anime" onClick={() => handleAnimeClick(item)}>
-              <p>{item.title}</p>
-              <img src={item.images.jpg.large_image_url} className="anime_img" />
-            </div>
-          ))}
+        <div>
+          <h3>Lista de animes</h3>
+          <div className="anime_container">
+            {animeList.map((item) => (
+              <div key={item.mal_id} className="anime" onClick={() => handleAnimeClick(item)}>
+                <p>{item.title}</p>
+                <img src={item.images.jpg.large_image_url} className="anime_img" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>
