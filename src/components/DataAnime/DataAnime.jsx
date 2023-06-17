@@ -8,8 +8,10 @@ function DataAnime() {
 console.log(item);
   return (
     <>
-      <h2>DataAnime</h2>
-      <Link to="/">Volver al inicio</Link>
+      <div className='nav_back'>
+        <h2>DataAnime</h2>
+        <Link to="/">Volver al inicio</Link>
+      </div>
       <div className='content_data'>
         {item && (
           <div>
